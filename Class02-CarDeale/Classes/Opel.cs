@@ -8,12 +8,7 @@ namespace Classes
 {
     public class Opel : Car
     {
-        public string Model { get; set; }
-        public byte Doors { get; set; }
-        public string FuelType { get; set; }
-        public double FuelConsumption { get; set; }
-        public int Price { get; set; }
-        public TypeOfCar CarType { get; set; }
+        
         public string Country { get; set; }
 
         public Opel(string model, byte doors, string fuelType, double fuelConsumption, int price, TypeOfCar carType, string country)

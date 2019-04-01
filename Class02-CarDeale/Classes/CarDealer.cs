@@ -19,7 +19,9 @@ namespace Classes
             {
                 if((car.Price >= min) && (car.Price <= max))
                 {
-                    Console.WriteLine(car.CarInfo());
+                    Console.WriteLine(car.CarInfo() + car.PrintPrice("eur"));
+                    Console.WriteLine("------------------------------------");
+
                 }
             }
 
@@ -31,7 +33,9 @@ namespace Classes
             {
                 if ((car.ConvertPriceToDenars() >= min) && (car.ConvertPriceToDenars() <= max))
                 {
-                    Console.WriteLine(car.CarInfo());
+                    Console.WriteLine(car.CarInfo() + car.PrintPrice("mkd"));
+                    Console.WriteLine("------------------------------------");
+
                 }
             }
 

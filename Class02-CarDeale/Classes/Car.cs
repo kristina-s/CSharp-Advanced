@@ -33,14 +33,13 @@ namespace Classes
 
         public virtual string CarInfo()
         {
-            return $"Model: {Model} \n" +
+            return $" -----------------------" +
+                $"\n Model: {Model} \n" +
                 $"Manufacturer: {Manufacturer} \n" +
                 $"Number of doors: {Doors} \n" +
                 $"Fuel type: {FuelType} \n" +
                 $"Fuel consumption: {FuelConsumption} \n" +
-                $"Price in EUR {Price} \n" +
-                $"Price in MKD {Price*61.5} \n" +
-                $"Type {CarType} \n";
+                $"Type {CarType}";
 
             
         }

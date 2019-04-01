@@ -8,12 +8,6 @@ namespace Classes
 {
     public class BMW : Car
     {
-        public string Model { get; set; }
-        public byte Doors { get; set; }
-        public string FuelType { get; set; }
-        public double FuelConsumption { get; set; }
-        public int Price { get; set; }
-        public TypeOfCar CarType { get; set; }
         public bool SunRoof { get; set; }
 
         public BMW(string model, byte doors, string fuelType, double fuelConsumption, int price, TypeOfCar carType, bool sunRoof)

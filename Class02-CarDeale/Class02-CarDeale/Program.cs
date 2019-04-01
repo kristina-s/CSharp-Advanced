@@ -63,16 +63,25 @@ namespace Class02_CarDeale
                                 int userChoice = int.Parse(Console.ReadLine());
                                 if (userChoice == 1)
                                 {
-                                    foreach (var car in bmwDealer.CarsList.Where(x => x.CarType == TypeOfCar.passenger))
+                                    List<Car> bmwPassenger = bmwDealer.CarsList
+                                        .Where(x => x.CarType == TypeOfCar.passenger)
+                                        .ToList();
+                                    foreach (var car in bmwPassenger)
                                     {
                                         Console.WriteLine(car.CarInfo());
+                                        Console.WriteLine($"Price in EUR: {car.PrintPrice("eur")}/ Price in MKD {car.PrintPrice("mkd")}");
                                     }
                                 }
                                 else if (userChoice == 2)
                                 {
-                                    foreach (var car in bmwDealer.CarsList.Where(x => x.CarType == TypeOfCar.cargo))
+                                    List<Car> bmwCargo = bmwDealer.CarsList
+                                        .Where(x => x.CarType == TypeOfCar.cargo)
+                                        .ToList();
+                                    foreach (var car in bmwCargo)
                                     {
                                         Console.WriteLine(car.CarInfo());
+                                        Console.WriteLine($"Price in EUR: {car.PrintPrice("eur")}/ Price in MKD {car.PrintPrice("mkd")}");
+
                                     }
                                 }
                                 else if ((userChoice != 1) || (userChoice != 2))
@@ -138,16 +147,26 @@ namespace Class02_CarDeale
                                 int userChoice02 = int.Parse(Console.ReadLine());
                                 if (userChoice02 == 1)
                                 {
-                                    foreach (var car in audiDealer.CarsList.Where(x => x.CarType == TypeOfCar.passenger))
+                                    List<Car> audiPassenger = audiDealer.CarsList
+                                        .Where(x => x.CarType == TypeOfCar.passenger)
+                                        .ToList();
+                                    foreach (var car in audiPassenger)
                                     {
                                         Console.WriteLine(car.CarInfo());
+                                        Console.WriteLine($"Price in EUR: {car.PrintPrice("eur")}/ Price in MKD {car.PrintPrice("mkd")}");
+
                                     }
                                 }
                                 else if (userChoice02 == 2)
                                 {
-                                    foreach (var car in audiDealer.CarsList.Where(x => x.CarType == TypeOfCar.cargo))
+                                    List<Car> audiCargo = audiDealer.CarsList
+                                        .Where(x => x.CarType == TypeOfCar.cargo)
+                                        .ToList();
+                                    foreach (var car in audiCargo)
                                     {
                                         Console.WriteLine(car.CarInfo());
+                                        Console.WriteLine($"Price in EUR: {car.PrintPrice("eur")}/ Price in MKD {car.PrintPrice("mkd")}");
+
                                     }
                                 }
                                 else if ((userChoice02 != 1) || (userChoice02 != 2))
@@ -213,16 +232,26 @@ namespace Class02_CarDeale
                                 int userChoice03 = int.Parse(Console.ReadLine());
                                 if (userChoice03 == 1)
                                 {
-                                    foreach (var car in opelDealer.CarsList.Where(x => x.CarType == TypeOfCar.passenger))
+                                    List<Car> opelPassenger = opelDealer.CarsList
+                                        .Where(x => x.CarType == TypeOfCar.passenger)
+                                        .ToList();
+                                    foreach (var car in opelPassenger)
                                     {
                                         Console.WriteLine(car.CarInfo());
+                                        Console.WriteLine($"Price in EUR: {car.PrintPrice("eur")}/ Price in MKD {car.PrintPrice("mkd")}");
+
                                     }
                                 }
                                 else if (userChoice03 == 2)
                                 {
-                                    foreach (var car in opelDealer.CarsList.Where(x => x.CarType == TypeOfCar.cargo))
+                                    List<Car> opelCargo = opelDealer.CarsList
+                                        .Where(x => x.CarType == TypeOfCar.cargo)
+                                        .ToList();
+                                    foreach (var car in opelCargo)
                                     {
                                         Console.WriteLine(car.CarInfo());
+                                        Console.WriteLine($"Price in EUR: {car.PrintPrice("eur")}/ Price in MKD {car.PrintPrice("mkd")}");
+
                                     }
                                 }
                                 else if ((userChoice03 != 1) || (userChoice03 != 2))
