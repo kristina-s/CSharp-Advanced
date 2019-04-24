@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Class10_E_shop.Models
+namespace E_shop.Models
 {
     public class Order
     {
         private List<OrderLine> _orderLines = new List<OrderLine>();
+
         public void AddOrderLine(Product product, int quantity, int index)
         {
             OrderLine line = new OrderLine();
@@ -18,7 +19,10 @@ namespace Class10_E_shop.Models
             line.Price = product.Price;
             _orderLines.Add(line);
         }
-
+        public int GetCount()
+        {
+            return _orderLines.Count;
+        }
         public double OrderTotal()
         {
             double total = 0;
@@ -28,7 +32,7 @@ namespace Class10_E_shop.Models
             }
             return total;
         }
-        
+
         public void PrintOrderList()
         {
             Console.WriteLine($" Index  | Product Name |  Quantity  |  Price  |" +
@@ -40,7 +44,16 @@ namespace Class10_E_shop.Models
                     $"  Total for item: {orderLine.OrderLineTotal()}");
             }
         }
-
+        public string PrintForReceipt()
+        {
+            string allProducts = $"\n\t Index  | Product Name |  Quantity  |  Price  |     Total for item";
+            foreach (var orderLine in _orderLines)
+            {
+                allProducts += $"\n\t {orderLine.Index}    |  {orderLine.ProductName}  |   {orderLine.Quantity}  |  {orderLine.Price}  |" +
+                    $"  Total for item: {orderLine.OrderLineTotal()}";
+            }
+            return allProducts;
+        }
         public void RemoveItemFromOrder(int i)
         {
             for (int i1 = 0; i1 < _orderLines.Count; i1++)
